@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import axios from "axios";
+import { useEffect, useState } from "react";
+import TaskItem from "./components/TaskItem";
 
 function App() {
+  const [tasks,setTasks] = useState([]);
+
+  const fetchTasks = async () =>{
+    try{
+     const {data} = await axios.get("https://fsc-task-manager-backend.herokuapp.com/tasks");
+      setTasks(data);
+      //console.log(data);
+    }catch(err){
+      console.log(err);
+    }
+  }
+
+  useEffect(()=>{
+    fetchTasks(); 
+  },[])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+     {tasks.map(task=>(
+      <TaskItem key={task.id} task={task}/>
+      ))}
+    </>
   );
 }
 
