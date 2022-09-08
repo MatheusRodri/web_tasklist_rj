@@ -1,0 +1,17 @@
+[33mcommit afe99408df3886d7a7d638e6eff3d4eca21e2ddf[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: Matheus <matheus.rj25@hotmail.com>
+Date:   Thu Sep 8 17:47:46 2022 -0300
+
+    feat: add task item component
+
+[33mcommit ef2811708c864bdba05d6520fceef72dd622a0f4[m[33m ([m[1;31morigin/main[m[33m)[m
+Author: Matheus <matheus.rj25@hotmail.com>
+Date:   Thu Sep 8 14:44:48 2022 -0300
+
+    add scss and config initials
+
+[33mcommit b81f681012e3ff12b1c0ae244e560a0d21dfb008[m
+Author: Matheus <matheus.rj25@hotmail.com>
+Date:   Thu Sep 8 13:59:27 2022 -0300
+
+    Initialize project using Create React App
