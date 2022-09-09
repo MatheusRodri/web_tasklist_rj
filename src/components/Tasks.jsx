@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import "./Tasks.scss";
 
 import TaskItem from "./TaskItem";
+import AddTask from "./AddTask";
 
 function Tasks() {
     const [tasks,setTasks] = useState([]);
@@ -28,9 +29,9 @@ function Tasks() {
 
             <div className="last-tasks">
                 <h3>Ultimas tarefas</h3>
+                <AddTask/>
                 <div className="list-tasks">
-
-                {tasks.filter(task => task.isCompleted === false).map(lastTask =>(<TaskItem task={lastTask}/>))}
+                  {tasks.filter(task => task.isCompleted === false).map(lastTask =>(<TaskItem task={lastTask}/>))}
                 </div>
             </div>
 
